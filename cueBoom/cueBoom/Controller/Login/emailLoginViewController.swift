@@ -151,9 +151,9 @@ class emailLoginViewController: UIViewController {
         let password = passwordFIeld.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
         // MARK: TO DO: HANDLE INPUT FROM USER
-        let test_email = "sybellaluna@yahoo.com";
-        let test_password = "Goyard2500!";
-        auth.signIn(withEmail: test_email, password: test_password) {[self] (auth, err) in
+//        let test_email = "sybellaluna@yahoo.com";
+//        let test_password = "Goyard2500!";
+        auth.signIn(withEmail: email!, password: password!) {[self] (auth, err) in
             if err != nil {
                 Alerts.errMessage(view: self, message: "Error: \(err!.localizedDescription)")
                 return
