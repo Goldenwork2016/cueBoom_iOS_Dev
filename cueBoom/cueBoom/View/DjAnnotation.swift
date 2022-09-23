@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import GeoFire
 class DjAnnotation: MKPointAnnotation {
     
     private var _session: Session!

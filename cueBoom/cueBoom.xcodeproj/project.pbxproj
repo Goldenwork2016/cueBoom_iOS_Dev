@@ -133,11 +133,6 @@
 		5FEFC83A20867409007B5924 /* UserLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC83920867409007B5924 /* UserLoginVC.swift */; };
 		5FEFC83C208678D1007B5924 /* SMSVerifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC83B208678D1007B5924 /* SMSVerifyVC.swift */; };
 		5FEFC83E20868E0B007B5924 /* DJChooseVenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC83D20868E0B007B5924 /* DJChooseVenueVC.swift */; };
-		5FEFC8512086AE53007B5924 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC8462086AE53007B5924 /* GFBase32Utils.m */; };
-		5FEFC8522086AE53007B5924 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC8482086AE53007B5924 /* GeoFire.m */; };
-		5FEFC8532086AE53007B5924 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC8492086AE53007B5924 /* GFGeoHashQuery.m */; };
-		5FEFC8542086AE53007B5924 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC84A2086AE53007B5924 /* GFQuery.m */; };
-		5FEFC8552086AE53007B5924 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC84B2086AE53007B5924 /* GFGeoHash.m */; };
 		5FEFC8582086BCF1007B5924 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC8572086BCF1007B5924 /* Session.swift */; };
 		5FEFC85A2086D628007B5924 /* UserChooseVenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC8592086D628007B5924 /* UserChooseVenueVC.swift */; };
 		5FEFC85E20872281007B5924 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFC85D20872281007B5924 /* HomeVC.swift */; };
@@ -321,21 +316,6 @@
 		5FEFC83920867409007B5924 /* UserLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginVC.swift; sourceTree = "<group>"; };
 		5FEFC83B208678D1007B5924 /* SMSVerifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSVerifyVC.swift; sourceTree = "<group>"; };
 		5FEFC83D20868E0B007B5924 /* DJChooseVenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJChooseVenueVC.swift; sourceTree = "<group>"; };
-		5FEFC8402086AE53007B5924 /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
-		5FEFC8422086AE53007B5924 /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
-		5FEFC8432086AE53007B5924 /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
-		5FEFC8442086AE53007B5924 /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
-		5FEFC8452086AE53007B5924 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
-		5FEFC8462086AE53007B5924 /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
-		5FEFC8472086AE53007B5924 /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
-		5FEFC8482086AE53007B5924 /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
-		5FEFC8492086AE53007B5924 /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
-		5FEFC84A2086AE53007B5924 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
-		5FEFC84B2086AE53007B5924 /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
-		5FEFC84D2086AE53007B5924 /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
-		5FEFC84E2086AE53007B5924 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
-		5FEFC84F2086AE53007B5924 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
-		5FEFC8502086AE53007B5924 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
 		5FEFC8562086AF27007B5924 /* cueBoom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cueBoom-Bridging-Header.h"; sourceTree = "<group>"; };
 		5FEFC8572086BCF1007B5924 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		5FEFC8592086D628007B5924 /* UserChooseVenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChooseVenueVC.swift; sourceTree = "<group>"; };
@@ -630,7 +610,6 @@
 				5FEFC8232085D730007B5924 /* Services */,
 				5FC50EEF2082C8E400CE1FF9 /* Storyboards */,
 				5F1269BD208949AB005F9B71 /* Xibs */,
-				5FEFC83F2086AE53007B5924 /* GeoFire */,
 			);
 			path = cueBoom;
 			sourceTree = "<group>";
@@ -647,9 +626,9 @@
 		5FC50EEA2082C87600CE1FF9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5F44D76F2085B5CE00741742 /* Login */,
 				5F0BE27520A3ADBF00957DFE /* DJSetup */,
 				5F44D7792085BCF700741742 /* DJMain */,
+				5F44D76F2085B5CE00741742 /* Login */,
 				5F5F15202098203500FCB97F /* UserSetup */,
 				5F44D77B2085BD0900741742 /* UserMain */,
 			);
@@ -746,44 +725,6 @@
 				9F80BDBE24819A9F0022C8BB /* PushNotificationManager.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		5FEFC83F2086AE53007B5924 /* GeoFire */ = {
-			isa = PBXGroup;
-			children = (
-				5FEFC8402086AE53007B5924 /* GeoFire-Prefix.pch */,
-				5FEFC8412086AE53007B5924 /* Implementation */,
-				5FEFC84C2086AE53007B5924 /* API */,
-			);
-			path = GeoFire;
-			sourceTree = "<group>";
-		};
-		5FEFC8412086AE53007B5924 /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				5FEFC8422086AE53007B5924 /* GFBase32Utils.h */,
-				5FEFC8432086AE53007B5924 /* GFGeoHashQuery.h */,
-				5FEFC8442086AE53007B5924 /* GFGeoHash.h */,
-				5FEFC8452086AE53007B5924 /* GFQuery+Private.h */,
-				5FEFC8462086AE53007B5924 /* GFBase32Utils.m */,
-				5FEFC8472086AE53007B5924 /* GeoFire+Private.h */,
-				5FEFC8482086AE53007B5924 /* GeoFire.m */,
-				5FEFC8492086AE53007B5924 /* GFGeoHashQuery.m */,
-				5FEFC84A2086AE53007B5924 /* GFQuery.m */,
-				5FEFC84B2086AE53007B5924 /* GFGeoHash.m */,
-			);
-			path = Implementation;
-			sourceTree = "<group>";
-		};
-		5FEFC84C2086AE53007B5924 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				5FEFC84D2086AE53007B5924 /* GFRegionQuery.h */,
-				5FEFC84E2086AE53007B5924 /* GeoFire.h */,
-				5FEFC84F2086AE53007B5924 /* GFQuery.h */,
-				5FEFC8502086AE53007B5924 /* GFCircleQuery.h */,
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		6ADC7FCD93C873BFCAEDD0C8 /* Pods */ = {
@@ -1031,6 +972,7 @@
 				"${BUILT_PRODUCTS_DIR}/FirebaseStorage/FirebaseStorage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GeoFire/GeoFire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleSignIn/GoogleSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -1067,6 +1009,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseStorage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GeoFire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -1112,7 +1055,6 @@
 				5F5F1529209820B800FCB97F /* UserFindVenueVC.swift in Sources */,
 				5FEFC85A2086D628007B5924 /* UserChooseVenueVC.swift in Sources */,
 				5F0BE28120A41DAA00957DFE /* DJEditGigVC.swift in Sources */,
-				5FEFC8552086AE53007B5924 /* GFGeoHash.m in Sources */,
 				9FD140A124534D0E00DE3416 /* DJGigConfirmedVC.swift in Sources */,
 				5F1977F420A16A23000A7A18 /* DjProfile.swift in Sources */,
 				9FC547EC2460A16800BE074B /* payoutViewController.swift in Sources */,
@@ -1148,7 +1090,6 @@
 				5F1C8A9820FC0EEB00B9AB70 /* DJSignUpVC.swift in Sources */,
 				5F1B89C5208E74FF007266D0 /* IndicatorLineView.swift in Sources */,
 				5F3FF5C320A13F99008D27E7 /* SegueFromLeft.swift in Sources */,
-				5FEFC8522086AE53007B5924 /* GeoFire.m in Sources */,
 				5F45011620D61C5100BB1780 /* UserMenuVC.swift in Sources */,
 				5F9559FF208AE66900806062 /* RequestCell.swift in Sources */,
 				9F6CC9D723BA4B8700A73877 /* Utilities.swift in Sources */,
@@ -1161,7 +1102,6 @@
 				5F9559F1208A7D0400806062 /* Onboarding3VC.swift in Sources */,
 				5F71A51122724CBF00E4B814 /* DJQueue.swift in Sources */,
 				5F44D7762085B7C800741742 /* Constants.swift in Sources */,
-				5FEFC8532086AE53007B5924 /* GFGeoHashQuery.m in Sources */,
 				5F0BE26E20A39C5A00957DFE /* Protocols.swift in Sources */,
 				9F80BDBF24819A9F0022C8BB /* PushNotificationManager.swift in Sources */,
 				5FD4A7C620CEF6B70027A692 /* CloudFunctions.swift in Sources */,
@@ -1214,7 +1154,6 @@
 				9F03D72124D313E2008E2F04 /* DJCollectionViewCell.swift in Sources */,
 				5F44546A209CD31200EB8A74 /* RoundedButton.swift in Sources */,
 				5F955A0D208BE9BA00806062 /* MakeRequestBtnBg.swift in Sources */,
-				5FEFC8512086AE53007B5924 /* GFBase32Utils.m in Sources */,
 				5FEFC82D2085E018007B5924 /* Song.swift in Sources */,
 				5FD4A7BE20CE9EFE0027A692 /* UserMainSelectVenueVC.swift in Sources */,
 				5FEFC860208725CC007B5924 /* SignOutVC.swift in Sources */,
@@ -1240,7 +1179,6 @@
 				5F4BA6D520D1C9A300FAA14D /* SegueFromBelow.swift in Sources */,
 				5FEFC8332085E1AF007B5924 /* FirestoreService.swift in Sources */,
 				5F366B7220D4707B00B1BDBA /* DJQueueItemCell.swift in Sources */,
-				5FEFC8542086AE53007B5924 /* GFQuery.m in Sources */,
 				9F03D72324D316FE008E2F04 /* dashBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

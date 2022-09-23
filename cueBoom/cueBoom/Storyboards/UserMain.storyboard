@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IZ9-FV-ULb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IZ9-FV-ULb">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -63,7 +62,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GenericSongCell" rowHeight="192" id="inO-IM-HKA" customClass="GenericSongCell" customModule="cueBoom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="192"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="inO-IM-HKA" id="NQn-vL-HRw">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
@@ -426,7 +425,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserMainSessionCell" rowHeight="79" id="gyp-yA-mPo" customClass="UserMainSessionCell" customModule="cueBoom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="79"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gyp-yA-mPo" id="iuJ-YO-u02">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
@@ -549,7 +548,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CartItemCell" rowHeight="76" id="j3W-IH-ggS" customClass="CartItemCell" customModule="cueBoom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="76"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j3W-IH-ggS" id="aPX-5v-mq9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
@@ -755,7 +754,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DJGigCell" rowHeight="79" id="Qbv-6h-67l" customClass="DJGigCell" customModule="cueBoom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="79"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qbv-6h-67l" id="yjt-TM-xSB">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
@@ -1199,7 +1198,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="feedCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="103" id="Ceb-7j-Yza" customClass="feedTableViewCell" customModule="cueBoom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="354" height="103"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="354" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ceb-7j-Yza" id="z93-Rp-hca">
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="103"/>
@@ -1352,7 +1351,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLs-P3-xvf">
-                                <rect key="frame" x="349" y="60" width="30" height="28.333333333333329"/>
+                                <rect key="frame" x="349" y="60.333333333333314" width="30" height="27.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="HZP-28-Od4"/>
                                     <constraint firstAttribute="height" constant="30" id="WMi-2t-z1e"/>
@@ -1461,7 +1460,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transaction" textLabel="Rof-Sk-HUR" detailTextLabel="S78-Zk-8xc" style="IBUITableViewCellStyleValue1" id="W3Q-B9-gox">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="354" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="354" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W3Q-B9-gox" id="Deo-l1-7rG">
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="43.666667938232422"/>
@@ -1593,7 +1592,7 @@
                                 <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="djCell" rowHeight="85" id="2vn-hX-5QS" customClass="djPublicTableViewCell" customModule="cueBoom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="384" height="85"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="384" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2vn-hX-5QS" id="rx0-Sp-dYO">
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="85"/>
@@ -1678,7 +1677,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="djCell" rowHeight="85" id="vFI-HU-ofl" customClass="djPublicTableViewCell" customModule="cueBoom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="85"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vFI-HU-ofl" id="sbS-tU-APw">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
@@ -1816,7 +1815,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="feedCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sessionCell" textLabel="m4t-Q8-Pfm" detailTextLabel="cES-NH-Qgp" rowHeight="103" style="IBUITableViewCellStyleSubtitle" id="KOh-Ip-ZAD" customClass="feedTableViewCell" customModule="cueBoom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="354" height="103"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="354" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KOh-Ip-ZAD" id="SxW-qG-lTt">
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="103"/>

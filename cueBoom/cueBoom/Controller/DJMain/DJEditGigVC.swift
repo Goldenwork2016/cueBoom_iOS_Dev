@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import GeoFire
 class DJEditGigVC: UIViewController {
     
     private var _session: Session!

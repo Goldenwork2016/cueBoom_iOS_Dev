@@ -8,7 +8,7 @@
 
 import Foundation
 import FirebaseFirestore
-
+import GeoFire
 struct Session {
     
     var startTime: Timestamp = Timestamp(date: Date())

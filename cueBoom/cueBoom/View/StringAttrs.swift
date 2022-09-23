@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 struct StringAttrs {
     
     let djProfileTextNotBold: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font : UIFont(name: "MavenProRegular", size: 24) as Any, NSAttributedString.Key.foregroundColor: UIColor.white]

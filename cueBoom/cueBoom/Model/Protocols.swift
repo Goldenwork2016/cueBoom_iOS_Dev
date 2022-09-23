@@ -16,7 +16,7 @@ protocol DjMapDelegate {
 }
 
 protocol NibLoadable {}
-
+import UIKit
 extension NibLoadable {
     func addNib(nibName: String, vc: UIViewController, frame: CGRect) -> UIView {
         let nib = Bundle.main.loadNibNamed(nibName, owner: vc, options: nil)?.first as! UIView

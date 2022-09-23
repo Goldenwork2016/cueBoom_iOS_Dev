@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseFirestore
-
+import GeoFire
 class DJMainConfirmGigVC: UIViewController {
 
     var _session: Session!

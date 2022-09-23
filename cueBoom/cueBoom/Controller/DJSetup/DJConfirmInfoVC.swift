@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import GeoFire
 class DJConfirmInfoVC: UIViewController {
     
     enum backSegue: String {

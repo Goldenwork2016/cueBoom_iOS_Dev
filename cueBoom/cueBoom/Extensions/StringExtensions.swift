@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 extension String {
     func to(_ color: UIColor) -> NSAttributedString {
        

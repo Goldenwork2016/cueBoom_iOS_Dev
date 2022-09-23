@@ -10,7 +10,7 @@ import Foundation
 import FirebaseDatabase
 import SwiftKeychainWrapper
 import CoreLocation
-
+import GeoFire
 //Data service for Realtime Database
 let RT_BASE = Database.database().reference()
 
@@ -22,8 +22,8 @@ class RealtimeService {
     //Geofire
     var geoFire: GeoFire!
     //Database references
-    private var _REF_ACTIVE_VENUES = RT_BASE.child("active_venues")
-
+    private var _REF_ACTIVE_VENUES = RT_BASE.child("sessions")
+    private var _REF_SESSIONS = RT_BASE.child("sessions")
     
     
     var REF_ACTIVE_VENUES: DatabaseReference {

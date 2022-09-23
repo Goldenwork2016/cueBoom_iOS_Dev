@@ -277,7 +277,7 @@ class DJLoginVC: UIViewController {
                     print("Failed to get access token")
                     return
                 }
-                
+                print("fb token is ____" + accessToken.tokenString)
                 let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
 
                 loginWithSocial(credential, .facebook)

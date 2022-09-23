@@ -20,6 +20,7 @@ target 'cueBoom' do
   pod 'Firebase/Messaging'
   pod 'Stripe'
   pod 'ViewAnimator', '2.7.1'
+  pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
 
   pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'

@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseFirestore
-
+import GeoFire
 class UserRequestVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -126,7 +126,7 @@ class UserRequestVC: UIViewController {
     func getActiveVenues() {
         guard let currentLoc = locationManager.location else {return}
         var keys = [String]()
-        let geoFire = GeoFire(firebaseRef: RealtimeService.shared.REF_ACTIVE_VENUES)!
+        let geoFire = GeoFire(firebaseRef: RealtimeService.shared.REF_ACTIVE_VENUES)
         var query: GFCircleQuery?
         query = geoFire.query(at: currentLoc, withRadius: 3000)
         

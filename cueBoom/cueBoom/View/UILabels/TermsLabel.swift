@@ -9,6 +9,7 @@
 protocol TermsLabelDelegate: class {
     func labelWasTappedForUsername(_ username: String)
 }
+import UIKit
 
 class TermsLabel: UILabel {
     private var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()

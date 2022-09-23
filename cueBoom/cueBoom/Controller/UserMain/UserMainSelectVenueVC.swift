@@ -9,6 +9,7 @@
 import UIKit
 import SwiftKeychainWrapper
 import FirebaseFirestore
+import GeoFire
 
 class UserMainSelectVenueVC: UIViewController {
     
@@ -53,7 +54,7 @@ class UserMainSelectVenueVC: UIViewController {
         //Location
         locationManager.delegate = self
         locationAuthStatus()
-        
+        print("UserMainSelectVenue_________")
         mapView.userTrackingMode = .follow
     }
     
@@ -220,8 +221,8 @@ extension UserMainSelectVenueVC: MKMapViewDelegate {
         return annotationView
     }
     
-    func mapView(_ mapView: MKMapView!, didUpdate
-            userLocation: MKUserLocation!) {
+    func mapView(_ mapView: MKMapView, didUpdate
+                    userLocation: MKUserLocation) {
         self.mapView.centerCoordinate = userLocation.location!.coordinate
     }
 }
@@ -303,6 +304,7 @@ extension UserMainSelectVenueVC: CLLocationManagerDelegate {
         }
         queryActiveVenues()
     }
+    
 }
 
 //Session info view "view model"

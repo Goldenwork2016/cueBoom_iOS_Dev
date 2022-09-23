@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import GeoFire
 class UserFindVenueVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -36,6 +36,7 @@ class UserFindVenueVC: UIViewController {
         originalTblViewFrame = tableView.frame
         mapView.djMapDelegate = self
         mapView.getActiveVenues()
+  
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -115,7 +116,14 @@ extension UserFindVenueVC: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        mapView.getActiveVenues()
+        if let location = locations.last{
+            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+            self.mapView.setRegion(region, animated: true)
+            mapView.getActiveVenues()
+        }
+        
+        
     }
 }
 

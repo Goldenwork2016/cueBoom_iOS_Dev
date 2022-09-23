@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import GeoFire
 class ChooseDJVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -41,7 +41,7 @@ class ChooseDJVC: UIViewController {
         guard let currentLoc = locationManager.location else {return}
         
         var keys = [String]()
-        let geoFire = GeoFire(firebaseRef: RealtimeService.shared.REF_ACTIVE_VENUES)!
+        let geoFire = GeoFire(firebaseRef: RealtimeService.shared.REF_ACTIVE_VENUES)
         var query: GFCircleQuery?
         query = geoFire.query(at: currentLoc, withRadius: 3000)
         

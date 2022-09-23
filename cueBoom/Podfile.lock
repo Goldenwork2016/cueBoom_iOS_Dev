@@ -443,6 +443,12 @@ PODS:
   - FirebaseStorage (8.11.0):
     - FirebaseCore (~> 8.0)
     - GTMSessionFetcher/Core (~> 1.5)
+  - GeoFire (4.3.0):
+    - GeoFire/Database (= 4.3.0)
+  - GeoFire/Database (4.3.0):
+    - Firebase/Database (< 9.0.0, > 7.0.0)
+    - GeoFire/Utils
+  - GeoFire/Utils (4.3.0)
   - GoogleAppMeasurement (8.11.0):
     - GoogleAppMeasurement/AdIdSupport (= 8.11.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
@@ -560,6 +566,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Messaging
   - Firebase/Storage
+  - GeoFire (from `https://github.com/firebase/geofire-objc.git`)
   - GoogleMaps
   - GooglePlaces
   - GoogleSignIn
@@ -612,6 +619,15 @@ SPEC REPOS:
     - SwiftMessages
     - ViewAnimator
 
+EXTERNAL SOURCES:
+  GeoFire:
+    :git: https://github.com/firebase/geofire-objc.git
+
+CHECKOUT OPTIONS:
+  GeoFire:
+    :commit: fd0349afe7f9fd88c5c55f2e875abc4533f3dcd9
+    :git: https://github.com/firebase/geofire-objc.git
+
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
@@ -631,6 +647,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 25764cf322e77f99449395870a65b2bef88e1545
   FirebaseMessaging: 02e248e8997f71fa8cc9d78e9d49ec1a701ba14a
   FirebaseStorage: 4d05cb1112ff8822a0f9f5090da8bd6d550602ec
+  GeoFire: c34927b5c81ab614f611c79aa8d074cfa9780f07
   GoogleAppMeasurement: aa3cb422fab2b05d2efac543a5720d1a85b9dea5
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleMaps: c213fc2334b7374144cede914da779b99be0ab74
@@ -653,6 +670,6 @@ SPEC CHECKSUMS:
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   ViewAnimator: 7512352ec4dec2901b980d16b1256d601c30a44c
 
-PODFILE CHECKSUM: c3d28538fb2104bcc2e3ffe1d3495bac4cfe1412
+PODFILE CHECKSUM: d6436fa63bccf4ee3749ccf3474335dea279c157
 
 COCOAPODS: 1.11.2
