@@ -25,9 +25,12 @@ class HomeVC: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        
         let appFirstTimeOpend = UserDefaults.standard.value(forKey: APP_FIRSTTIME_OPENED) as? Bool ?? false
-        let rememberMe = UserDefaults.standard.value(forKey: REMEMBER_ME) as? Bool ?? false
-        if Auth.auth().currentUser != nil && appFirstTimeOpend == true && rememberMe == true{
+        
+//        let rememberMe = UserDefaults.standard.value(forKey: REMEMBER_ME) as? Bool ?? false
+        
+        if Auth.auth().currentUser != nil && appFirstTimeOpend == true  {
             getUserType(uid: Auth.auth().currentUser!.uid)
         } else {
             self.coverLoadingView.alpha = 0

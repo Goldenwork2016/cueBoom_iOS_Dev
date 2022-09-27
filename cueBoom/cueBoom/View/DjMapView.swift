@@ -28,55 +28,56 @@ class DjMapView: MKMapView {
     //Query the active venues in realtime database and display as annotations on the map
     func getActiveVenues() {
         
-        guard let currentLoc = self.userLocation.location else {return}
-        var keys = [String]()
-        let geoFire = GeoFire(firebaseRef: RealtimeService.shared.REF_ACTIVE_VENUES)
-        var query: GFCircleQuery?
-        query = geoFire.query(at: currentLoc, withRadius: 3000)
-
-        //The key that enters is the sessionUid of the session stored in Firestore
-        query?.observe(.keyEntered, with: { (key: String!, location: CLLocation!) in
-            
-            keys.append(key)
-            
-        })
-        print("here_____dddddd_______________");
-        print(keys)
-        query?.observeReady({
-            self.addAnnotations(keys: keys) { (sessions) in
-                //self._totalSessions.sort(by: {$0.distanceFromUser < $1.distanceFromUser})
-                print("here____________________");
-                print(sessions)
-                self.djMapDelegate.didGetSessions(sessions)
+//        guard let currentLoc = self.userLocation.location else {return}
+//        var keys = [String]()
+//        let geoFire = GeoFire(firebaseRef: RealtimeService.shared.REF_ACTIVE_VENUES)
+//        var query: GFCircleQuery?
+//        query = geoFire.query(at: currentLoc, withRadius: 3000)
+//
+//        //The key that enters is the sessionUid of the session stored in Firestore
+//        query?.observe(.keyEntered, with: { (key: String!, location: CLLocation!) in
+//
+//            keys.append(key)
+//
+//        })
+//        print("here_____dddddd_______________");
+//        print(keys)
+//        query?.observeReady({
+//            self.addAnnotations(keys: keys) { (sessions) in
+//                //self._totalSessions.sort(by: {$0.distanceFromUser < $1.distanceFromUser})
+//                print("here____________________");
+//                print(sessions)
+//                self.djMapDelegate.didGetSessions(sessions)
+//            }
+//        })
+        
+        
+        guard let currentLoc = locationManager.location else {return}
+        let db = Firestore.firestore()
+        db.collection("sessions").whereField("ended", isEqualTo: false).whereField("onlineEvent", isEqualTo: false).whereField("startTime", isLessThan: Date()).getDocuments { (snap, err) in
+            if err !=  nil {
+//                Alerts.errMessage(view: self, message: "Server Error: \(err!.localizedDescription)")
+                return
             }
-        })
-        
-        
-//        guard let currentLoc = locationManager.location else {return}
-//        let db = Firestore.firestore()
-//        db.collection("sessions").whereField("ended", isEqualTo: false).whereField("onlineEvent", isEqualTo: false).whereField("startTime", isLessThan: Date()).getDocuments { (snap, err) in
-//            if err !=  nil {
-////                Alerts.errMessage(view: self, message: "Server Error: \(err!.localizedDescription)")
-//                return
-//            }
-//
-//            guard snap != nil else {
-////                Alerts.errMessage(view: self, message: "Error parsing server data. Please try again.")
-//                return
-//            }
-//
-//            var sessionsLoaded: [Session] = []
-//            for sessionData in snap!.documents {
-//                let session = Session(data: sessionData.data())
-//                sessionsLoaded.append(session)
-////                self.addAnnotations(session)
-//            }
-//            print("sessions_______")
-//            print(sessionsLoaded)
-//            self.djMapDelegate.didGetSessions(sessionsLoaded)
-////            self.sessions = sessionsLoaded
-//
-//        }
+
+            guard snap != nil else {
+//                Alerts.errMessage(view: self, message: "Error parsing server data. Please try again.")
+                return
+            }
+
+            var sessionsLoaded: [Session] = []
+            for sessionData in snap!.documents {
+                let session = Session(data: sessionData.data())
+                sessionsLoaded.append(session)
+//                self.addAnnotations(session)
+            }
+            
+            print("sessions_______")
+            print(sessionsLoaded)
+            self.djMapDelegate.didGetSessions(sessionsLoaded)
+//            self.sessions = sessionsLoaded
+
+        }
         
 //        RealtimeService.shared.getAllVenue { keys in
 //            self.addAnnotations(keys: keys) { (sessions) in

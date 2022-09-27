@@ -31,6 +31,35 @@ class DJLoginVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        let savedCreds = Utilities.checkForKeyChainLogin()
+        let email = savedCreds?.0
+        let password = savedCreds?.1
+//        let rememberMe = UserDefaults.standard.bool(forKey: REMEMBER_ME)
+        let rememberMe: Bool? = KeychainWrapper.standard.bool(forKey: REMEMBER_ME)
+        
+        print("email is ______" + email!);
+        print(rememberMe as Any)
+        
+        if password != nil && email != nil {
+            if rememberMe == true {
+                print("remember me is yes.......")
+                butRememberMe.isSelected = true
+                self.emailField.text = email
+                self.passwordField.text = password
+            }
+            else {
+                self.emailField.text = ""
+                self.passwordField.text = ""
+                print("remember me is no.......")
+                butRememberMe.isSelected = false
+            }
+            
+            
+            
+        }
+
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -100,6 +129,7 @@ class DJLoginVC: UIViewController {
         
         UserDefaults.standard.setValue(true, forKey: APP_FIRSTTIME_OPENED)
         UserDefaults.standard.setValue(butRememberMe.isSelected, forKey: REMEMBER_ME)
+        KeychainWrapper.standard.set(butRememberMe.isSelected, forKey: REMEMBER_ME)
         
         let db = Firestore.firestore()
         print("UID: \(auth.user.uid)")
@@ -229,7 +259,7 @@ class DJLoginVC: UIViewController {
                 self.coverView.alpha = 0
                 return
             }
-            
+            let _ = Utilities.saveKeychainLoginInfo(email: email, password: password)
             gotoMainVC(auth, .email)
         })
     }

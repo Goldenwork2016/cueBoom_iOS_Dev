@@ -34,25 +34,47 @@ class emailLoginViewController: UIViewController {
         let savedCreds = Utilities.checkForKeyChainLogin()
         let email = savedCreds?.0
         let password = savedCreds?.1
+//        let rememberMe = UserDefaults.standard.bool(forKey: REMEMBER_ME)
+        let rememberMe: Bool? = KeychainWrapper.standard.bool(forKey: REMEMBER_ME)
+        
+        print("email is ______" + email!);
+        print(rememberMe as Any)
         
         if password != nil && email != nil {
-            let context = LAContext()
-                var error: NSError? = nil
-                let canEvaluate = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
-            if canEvaluate {
-                if context.biometryType != .none {
-                    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To access your data") { (success, error) in
-                        if success {
-                            DispatchQueue.main.async {
-                                self.emailField.text = email
-                                self.passwordFIeld.text = password
-                                self.loginButtonTapped(self)
-                            }
-                        }
-                    }
-                }
+            if rememberMe == true {
+                print("remember me is yes.......")
+                butRememberMe.isSelected = true
+                self.emailField.text = email
+                self.passwordFIeld.text = password
             }
+            else {
+                self.emailField.text = ""
+                self.passwordFIeld.text = ""
+                print("remember me is no.......")
+                butRememberMe.isSelected = false
+            }
+            
+            
+            
         }
+//            let context = LAContext()
+//                var error: NSError? = nil
+//                let canEvaluate = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
+//            if canEvaluate {
+//                if context.biometryType != .none {
+//                    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To access your data") { (success, error) in
+//                        if success {
+//                            DispatchQueue.main.async {
+//                                self.emailField.text = email
+//                                self.passwordFIeld.text = password
+//                                print("remember me is yes.......")
+////                                self.loginButtonTapped(self)
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -78,6 +100,9 @@ class emailLoginViewController: UIViewController {
     func gotoMainVC(_ auth: AuthDataResult?, _ loginType: LoginType) {
         UserDefaults.standard.setValue(true, forKey: APP_FIRSTTIME_OPENED)
         UserDefaults.standard.setValue(butRememberMe.isSelected, forKey: REMEMBER_ME)
+        KeychainWrapper.standard.set(butRememberMe.isSelected, forKey: REMEMBER_ME)
+        print("______ttt____")
+        print(butRememberMe.isSelected)
         
         let db = Firestore.firestore()
         db.collection("users_private").document(auth!.user.uid).getDocument { (snap, err) in
@@ -147,6 +172,7 @@ class emailLoginViewController: UIViewController {
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {
+        
         let email = emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordFIeld.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
@@ -163,6 +189,7 @@ class emailLoginViewController: UIViewController {
             let _ = Utilities.saveKeychainLoginInfo(email: email!, password: password!)
             gotoMainVC(auth, .email)
         }
+        
     }
     
     @IBAction func didTapApple(_ sender: Any) {
